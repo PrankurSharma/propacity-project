@@ -4,10 +4,9 @@ body {
 
 .App {
   text-align: center;
-  overflow-y: hidden;
-  padding: 0;
+  padding: 0 0 20px 0;
   color: white;
-  height: 100vh;
+  min-height: calc(100vh - 98px);
 }
 
 .static-loader {
@@ -55,6 +54,7 @@ body {
   position: fixed;
   z-index: 100;
   padding: 20px;
+  background-color: #181920;
 }
 
 .topbar-container ul {
