@@ -1,0 +1,223 @@
+body {
+  background-color: #181920;
+}
+
+.App {
+  text-align: center;
+  overflow-y: hidden;
+  padding: 0;
+  color: white;
+  height: 100vh;
+}
+
+.static-loader {
+  width: 50px; 
+  height: 50px;
+  top: 90px;
+  left: 50%;
+  padding: 0;
+  position: absolute;
+}
+
+.spinner {
+  position: absolute;
+  top: 90px;
+  height: 50px;
+  width: 50px;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.span-head {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+
+.span-sub-head {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.topbar-container {
+  padding: 10px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  padding: 20px;
+}
+
+.topbar-container ul {
+  list-style: none;
+}
+
+.container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: grab;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  height: inherit;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+.container:active {
+  cursor: grabbing;
+}
+
+.outer-card {
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  min-width: 450px;
+  width: 40%;
+}
+
+.forecast-card {
+  padding: 10px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-card {
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 20px;
+  min-width: 450px;
+  width: 50%;
+  background-color: #3a3f50;
+}
+
+.inner-card {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inner-card:first-child {
+  border-right: 1px solid gray;
+}
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.sub-div {
+  position: relative;
+  width: 30%;
+}
+
+.search-input {
+  width: 30%;
+  height: 44px;
+  font-size: 16px;
+  border-radius: 10px;
+  padding-left: 20px;
+  background-color: #3a3f50;
+  color: white;
+}
+
+.dropdown-list {
+  border: 1px solid gray;
+  border-top: none;
+  position: absolute;
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  cursor: pointer;
+  background-color: #181920;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  padding: 20px;
+}
+
+.dropdown-item:hover {
+  background-color: lightgray;
+}
+
+.dropdown-item-selected {
+  background-color: gray;
+}
+
+.dropdown-item-highlighted {
+  background-color: lightgray;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 34px;
+  border-radius: 40px;
+  background-color: #ccc;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20%;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: left 0.3s ease-in-out;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-input:checked+.toggle-label .toggle-slider {
+  left: 32px;
+}
+
+.alert-card {
+  width: 20%;
+  position: absolute;
+  right: 40px;
+  border-radius: 10px;
+  background-color: red;
+  z-index: 100;
+  border: 1px solid gray;
+  text-align: left;
+  padding: 0 20px;
+}
