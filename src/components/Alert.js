@@ -15,7 +15,6 @@ export default function Alert() {
     return (
         <>
             {alerts.map((val, idx) => {
-                console.log("My alert: ", alerts);
                 return <Card className="alert-card"
                     key={idx}
                     title={val.title}

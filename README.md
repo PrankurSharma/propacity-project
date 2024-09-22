@@ -1,5 +1,7 @@
 # Propcaity Weather Dashboard
 Thank you for visiting my project. This project is a part of the selection process for ReactJs Developer role at Propacity.
+You may access the deployed version of this project here:
+https://propacity-dashboard.pages.dev/
 
 # Tech stack: React.js and CSS
 Note: No other third party library has been used in the creation of this project. All the components have been developed from scratch.

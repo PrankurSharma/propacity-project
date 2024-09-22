@@ -8,16 +8,6 @@ export default function useWeatherApi() {
     const [data, setData] = useState({});
     const { refresh, searchTerm, unit, setLoading, setAlerts } = useContext(AppContext);
     const { get } = useApi();
-    // const currentWeather = async (city) => {
-    //     try {
-    //         let myData = await get(CONSTANTS.FETCH_CURRENT_WEATHER + `&q=${city}`);
-    //         setData(myData);
-    //     }
-    //     catch (err) {
-    //         console.log("Error");
-    //         throw err;
-    //     }
-    // }
 
     //this function updates the data by calling the api to fetch weather forecast and updates the states
 
@@ -25,7 +15,6 @@ export default function useWeatherApi() {
         setLoading(true);
         try {
             let myData = await get(CONSTANTS.FETCH_FORECAST + `&q=${city}&days=${days}`);
-            console.log("My data forecast: ", myData);
             setData({
                 location: myData.location.name,
                 weatherType: myData.current.condition.text,
@@ -41,10 +30,8 @@ export default function useWeatherApi() {
                 })
             });
             setLoading(false);
-            // localStorage.setItem("data", JSON.stringify({ ...myData }));
         }
         catch (err) {
-            console.log("Error", err);
             let myData = JSON.parse(localStorage.getItem("data"));
             if (myData) {
                 setData(myData);
@@ -71,7 +58,6 @@ export default function useWeatherApi() {
     //calls the api initially, when data for a particular city is searched and on refresh operation
 
     useEffect(() => {
-        // currentWeather("Delhi, India");
         if (searchTerm === "") {
             if (!Object.keys(data).length > 0) {
                 forecastWeather("New Delhi", 6);

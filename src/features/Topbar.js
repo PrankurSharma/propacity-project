@@ -1,7 +1,6 @@
 import { Suspense, useContext } from "react";
 import { Spinner, ToggleSwitch, SearchBar } from "../components/index";
 import { AppContext } from "../context/ContextProvider";
-console.log("Search bar imported: ", SearchBar);
 
 export default function Topbar() {
     const { unit, setUnit } = useContext(AppContext);

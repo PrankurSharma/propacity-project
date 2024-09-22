@@ -7,7 +7,6 @@ export default function Container({ children, ...otherProps }) {
     const { setRefresh, setLoading, pullDist, setPullDist } = useContext(AppContext);
 
     const handleTouchStart = (e) => {
-        console.log("Event: ", e, window.scrollY);
         if (window.scrollY === 0) {
             setInitialTouch(e.clientY);
             setIsDragging(true);
@@ -23,7 +22,6 @@ export default function Container({ children, ...otherProps }) {
         if (isDragging) {
             const pullDistance = e.clientY - initialTouch;
             setPullDist(pullDistance);
-            console.log("My pull: ", pullDistance);
             if (pullDistance > 100) {
                 //refresh triggered
                 setRefresh(refresh => !refresh);
