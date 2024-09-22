@@ -19,8 +19,8 @@ export default function MainPage() {
                 />
                 <Card className="container-card" title="5-DAY FORECAST">
                     <Card className="inner-card">
-                        {data.forecast?.map((val) => {
-                            return <ForecastCard data={val} />
+                        {data.forecast?.map((val, idx) => {
+                            return <ForecastCard data={val} key={idx}/>
                         })}
                     </Card>
                 </Card>

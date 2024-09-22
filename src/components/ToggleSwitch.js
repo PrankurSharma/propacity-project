@@ -9,6 +9,7 @@ export default function ToggleSwitch(props) {
                 id="toggle-input"
                 checked={checked}
                 onClick={(e) => e.stopPropagation()}
+                readOnly
                 // onChange={(e) => setUnit(e.target.checked ? "fahrenheit" : "celcius")}
             />
             <label className="toggle-label" htmlFor="toggle-input">

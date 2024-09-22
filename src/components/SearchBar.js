@@ -44,10 +44,12 @@ export default function SearchBar() {
             setShowDropdown(false);
             setSearch(filteredData[highlightedIdx]);
             setSearchTerm(filteredData[highlightedIdx]);
+            document.getElementById("search").blur();
         }
         else if (e.key === "Enter") {
             setShowDropdown(false);
             setSearchTerm(search);
+            document.getElementById("search").blur();
         }
     }
 
@@ -80,6 +82,7 @@ export default function SearchBar() {
             <input className="search-input"
                 placeholder="Search a city"
                 value={search}
+                id="search"
                 onClick={(e) => setShowDropdown(true)}
                 onChange={(e) => setSearch(e.target.value)}
                 onKeyDown={handleKeyDown}
@@ -98,6 +101,7 @@ export default function SearchBar() {
                                     setSearchTerm(val);
                                     setHighlightedIdx(idx);
                                     setShowDropdown(false);
+                                    document.getElementById("search").blur();
                                 }}
                             >
                                 {val}
