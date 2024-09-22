@@ -1,4 +1,3 @@
-import { Suspense } from "react";
 import { Image, Card, SpanHeading } from "./index";
 
 export default function OuterCard(props) {
